@@ -71,7 +71,7 @@ function MakeRequest(url, targetDiv)
 </div>
 
 
-<div id="content">
+<div id="content" class="right_side" >
 </div>
 </div>
 </body>

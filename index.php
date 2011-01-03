@@ -50,7 +50,7 @@ color: #000000;
 background-color: #FFFFFF;
 margin: 20px 0px 20px 0px;
 padding:0px 0px 25px 15px;
-border:1px solid #CCCCCC;
+	
 } 
 </style>
 <script type="text/javascript">

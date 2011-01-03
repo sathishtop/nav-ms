@@ -9,7 +9,7 @@ if($userid!='' )
 {
 
 	echo "
-		<form action= 'logout.php' method ='post'>
+		<form action= 'logout.php' method ='post' name='logout'>
 	<div class='member_login'>
       <div class='login_box'>
 		  <fieldset>
@@ -19,8 +19,8 @@ if($userid!='' )
 		  <div class='column_1' > 
 
 		<input type='hidden'  name='userid' value='$userid'/>
-		<a href='#' onclick=submit(); >logout </a>
-		
+		<a href='#' onclick=logout.submit(); >logout </a>
+
  		</div>
           </fieldset>
 		</div>

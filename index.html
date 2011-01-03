@@ -50,6 +50,8 @@ $(document).ready(function()
 			{ 
 			  //add message and change the class of the box and start fading
 			  $(this).html('At least 5 characters ').addClass('messageboxerror').fadeTo(900,1);
+			  $("#clicked").val()=1;
+			  $("#valid").val()=0;
 			});	
 			return false;
 		}

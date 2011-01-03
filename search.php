@@ -34,6 +34,7 @@ background-repeat:no-repeat;
 }
 .searchResultsRowEven
 {
+	font-size:14px;
 float: none;
 padding-top:0;
 padding-bottom:0;
@@ -50,7 +51,7 @@ color: #000000;
 {
 
 float: none;
-
+	font-size:14px;
 padding-top:0;
 padding-bottom:0;
 padding-left:10;
@@ -62,15 +63,16 @@ background-color:#6F6;
 color: #000000; 
 }
 </style>
+
 </head>
 <body marginwidth="50">
 <div class="searchParams">
 
-<form name="searchQuery" action="search_results.php" method="post" target="_blank"> 
+<form name="searchQuery" action="javascript:callAjax();" method="post"> 
 <table>
 <tr> <td class="m1"> Search By :</td>
 <td>
-<select name="searchfield">
+<select name="searchfield" id="searchfield">
 
 <option value="any"> Any </option> 
 
@@ -83,10 +85,10 @@ color: #000000;
 <option value="qualification"> Qualification</option> 
 </select>
 </td>
-<td> <input type="text" name="searchquery">
+<td> <input type="text" name="searchquery" id="searchquery">
  </td>
  
- <td><input type="submit" value="Find Friends">  </td></tr>
+ <td><input type="button" value="Find Friends" onClick="javascript:callAjax();">  </td></tr>
 </table>
 </form>
 </div>

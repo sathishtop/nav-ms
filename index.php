@@ -135,6 +135,17 @@ with (field)
   }
 }
 
+
+function callAjax()
+{
+	var searchField = document.getElementById('searchfield').value;
+	var searchQuery = document.getElementById('searchquery').value;
+	var url="search_results.php?searchfield="+searchField+"&searchquery="+searchQuery;
+	ajaxpage(url, 'searchResults');
+	}
+	
+
+
 </script>
   
   <script type="text/javascript">
@@ -255,7 +266,7 @@ if($userid =='' )
 }
 else
 {
-            echo " <li><a href=\"javascript:ajaxpage('register.php?technicianid=$userid', 'test');\">My Profile</a></li>";
+            echo " <li><a href=\"javascript:ajaxpage('profile.php', 'contentarea');\">My Profile</a></li>";
 	}
 ?>
             <li><a href="javascript:ajaxpage('forum.php', 'contentarea');">Forum</a></li>

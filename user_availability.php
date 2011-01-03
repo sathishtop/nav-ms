@@ -4,18 +4,49 @@
 //  This notice MUST stay intact for legal use
 
 //this varible contains the array of existing users
-$existing_users=array('roshan','mike','jason'); 
-//value got from the get metho
-$user_name=$_POST['user_name'];
-//checking weather user exists or not in $existing_users array
-if (in_array($user_name, $existing_users))
-{
-	//user name is not availble
-	echo "no";
-} 
-else
-{
-	//user name is available
-	echo "yes";
+
+$host = "localhost";
+
+$user = "root";
+
+$pass = "";
+
+$db = "navms06";
+
+
+$con = mysql_connect($host,$user,$pass);
+
+if (!$con)
+
+  {
+	  
+  die('Could not connect: ' . mysql_error());
+  
+  }
+  
+  mysql_select_db($db, $con);
+
+
+$username = $_POST['user_name'];
+ 
+ 
+
+// Query database to check if the username is available
+$query = "Select * from userlogininfo where uname = '$username'";
+// Execute the above query using your own script and if it return you the
+// result (row) we should return negative, else a success message.
+ 
+$result = mysql_query($query,$con);	
+
+//$result==null? :available=false;
+$theQuery = mysql_query($query);
+$returned_rows = mysql_num_rows ($theQuery);
+if ($returned_rows == 0){
+echo "no";
+}else{
+echo "yes";
 }
+
+
+
 ?>

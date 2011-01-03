@@ -61,12 +61,16 @@ function MakeRequest(url, targetDiv)
 <body>
 
     <div class="left_side">
+<span class="m1"><a href="javascript:ajaxpage('password.php', 'content');">Password</a></span>
 
-<span class="m1"><a href="javascript:ajaxpage('gallery.php', 'content');">Profile</a></span>
-<span class="m1"><a href="link.html">Contact Info</a></span>
+
+<span class="m1"><a href="javascript:ajaxpage('profile.php', 'content');">Profile</a></span>
+<span class="m1"><a href="javascript:ajaxpage('profile.php', 'content');">New Activity</a></span>
 <span class="m1"><a href="#" onclick="window.open('sb/index.php','', 'width=400,height=600,scrollbars=yes');
 " > Shoutbox</a></span>
 <span class="m1"><a href="javascript:ajaxpage('search.php', 'content');">Search</a></span>
+
+
 <br />
 </div>
 

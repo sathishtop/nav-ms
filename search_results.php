@@ -1,9 +1,13 @@
+<html>
+<head>
+</head>
+<body>
 
 <?php
-if(isset($_POST['searchfield']) && isset($_POST['searchquery']))
+if(isset($_REQUEST['searchfield']) && isset($_REQUEST['searchquery']))
 {
-	$field = $_POST['searchfield'];
-	$value = $_POST['searchquery'];
+	$field = $_REQUEST['searchfield'];
+	$value = $_REQUEST['searchquery'];
 	$sql='';
 	if($field=='uname')
 	   $query= "select id  from userlogininfo where uname like '%$value%'";
@@ -85,3 +89,5 @@ echo "</TABLE>";
 
 }
 ?>
+</body>
+</html>

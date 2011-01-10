@@ -1,5 +1,8 @@
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
+   <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Nav-Marvellous Stars</title>
@@ -238,17 +241,55 @@ aQueryString[iParam].indexOf(strParamName.toLowerCase() + "=") > -1 ){
   </script>
   	
     
-  </head>
+ 
+  
+  
+  
+  
+  
+  
+  
+   
+
+
+   
+    
+  
+ </head> 
   <!--<body onload="ajaxpage('ibanner.php', 'contentarea');">-->
-  <body onload="javascript:ajaxpage('uhome.php', 'contentarea');alertMsg();" >
+  
+  <body -- onload="javascript:ajaxpage('uhome.php', 'contentarea');alertMsg();" >
+   
+   
+    <p><fb:login-button autologoutlink="true"></fb:login-button></p>
+    <p><fb:like></fb:like></p>
+
   <div id="layout">
     <div id="header">
       <div id="logo"><a href="#"><img src="images/site_logo.jpg" alt="" /></a></div>
+    <div id="fb-root"></div>
      <?php
      
      include("login.php");
      ?>
+      <script>
+      window.fbAsyncInit = function() {
+        FB.init({appId: '156922751026937', status: true, cookie: true,
+                 xfbml: true});
+      };
+      (function() {
+        var e = document.createElement('script');
+        e.type = 'text/javascript';
+        e.src = document.location.protocol +
+          '//connect.facebook.net/en_US/all.js';
+        e.async = true;
+        document.getElementById('fb-root').appendChild(e);
+      }());
+    </script>
+ 
     </div>
+    
+ 
     <div id="body_container">
       <div id="body_container_inner">
         <div id="menu">
@@ -276,12 +317,9 @@ else
     		</ul>
         </div>
        
-      
-       
-  
         <div  id="contentarea" class="container_row ">
         	<div class="find_more" id="test">
-                    
+                    <div id="fb-root"></div>
                                
 			</div>
 

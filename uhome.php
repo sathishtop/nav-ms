@@ -76,6 +76,8 @@ function MakeRequest(url, targetDiv)
 
 
 <div id="content" class="right_side" >
+
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:facepile href="localhost/nav-ms" width="200" max_rows="3"></fb:facepile>
 </div>
 </div>
 </body>

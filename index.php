@@ -256,13 +256,11 @@ aQueryString[iParam].indexOf(strParamName.toLowerCase() + "=") > -1 ){
     
   
  </head> 
-  <!--<body onload="ajaxpage('ibanner.php', 'contentarea');">-->
+  <body onload="ajaxpage('ibanner.php', 'contentarea');alertMsg();" >
   
-  <body -- onload="javascript:ajaxpage('uhome.php', 'contentarea');alertMsg();" >
+<!--   <body onload="javascript:ajaxpage('uhome.php', 'contentarea');alertMsg();" > -->
    
    
-    <p><fb:login-button autologoutlink="true"></fb:login-button></p>
-    <p><fb:like></fb:like></p>
 
   <div id="layout">
     <div id="header">
@@ -272,21 +270,7 @@ aQueryString[iParam].indexOf(strParamName.toLowerCase() + "=") > -1 ){
      
      include("login.php");
      ?>
-      <script>
-      window.fbAsyncInit = function() {
-        FB.init({appId: '156922751026937', status: true, cookie: true,
-                 xfbml: true});
-      };
-      (function() {
-        var e = document.createElement('script');
-        e.type = 'text/javascript';
-        e.src = document.location.protocol +
-          '//connect.facebook.net/en_US/all.js';
-        e.async = true;
-        document.getElementById('fb-root').appendChild(e);
-      }());
-    </script>
- 
+      
     </div>
     
  
@@ -307,10 +291,10 @@ if($userid =='' )
 }
 else
 {
-            echo " <li><a href=\"javascript:ajaxpage('profile.php', 'contentarea');\">My Profile</a></li>";
+            echo " <li><a href=\"javascript:ajaxpage('uhome.php', 'contentarea');\">My Profile</a></li>";
 	}
 ?>
-            <li><a href="javascript:ajaxpage('forum.php', 'contentarea');">Forum</a></li>
+            <li><a href="http://forum.acsathish.co.cc/">Forum</a></li>
             <li><a href="javascript:ajaxpage('projects.php', 'contentarea');">Projects</a></li>
             <li><a href="javascript:ajaxpage('gallery.php', 'contentarea');">Gallery</a></li>   
             <li><a href="javascript:ajaxpage('contact_us.php', 'contentarea');">Contact Us</a></li>

@@ -2,11 +2,11 @@
 
 $host = "localhost";
 
-$user = "root";
+$user = "365755_sathish";
 
-$pass = "";
+$pass = "hariharan";
 
-$db = "navms06";
+$db = "acsathish_zxq_navms06";
 
 
 $con = mysql_connect($host,$user,$pass);

@@ -387,7 +387,7 @@ margin-bottom: 15px;
 <br>
 <br>
 
-<form action="http://localhost/CrystalX/1/register_db.php" id="customForm"  method="post"  >
+<form action="register_db.php" id="customForm"  method="post"  >
 <input type="hidden" name="valid" id="valid" value="0">
 <input type="hidden" name="clicked" id="clicked" value="0">
               

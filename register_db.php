@@ -71,7 +71,7 @@ $query = "select * from userlogininfo where uname='$uname' and passkey='$npass' 
     $result1 = mysql_query ($query);
     $row = mysql_fetch_array($result1);
     $id  = $row[0];
-	echo $id;
+
 	
 	
 $profileInfoSql = " insert into profileinfo ( id, fname, dob, sex, clocation, pphoto, interests) values ($id,'$fname',$dob,'$sex','$clocation','$pphoto','$interests');";
@@ -115,8 +115,11 @@ $mail->From = 'nav.ms.06@gmail.com';
 $mail->FromName = 'User Name';
 $mail->Subject = 'Subject';
 $mail->AddAddress($email);
-echo $email;
-$mail->Body = 'hi'.$fname.", http://localhost/Crystalx/1/activate.php?id=".$npass."&mode=mail&name=".$uname;
+
+$host  = $_SERVER['HTTP_HOST'];
+$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+$mail->Body = 'hi'.$fname.", http://$host$uri/activate.php?id=".$npass."&mode=mail&name=".$uname;
+
 echo $mail->Send();
 
 	
@@ -124,8 +127,7 @@ $q1 = "select * from userlogininfo where uname='$refid'";
     $r1 = mysql_query ($q1);
     $r1 = mysql_fetch_array($r1);
     $refererid  = $r1[0];
-	echo "refererid =".$refererid;
-$query1 = "select * from contactinfo where id='$refererid'";
+	$query1 = "select * from contactinfo where id='$refererid'";
     $result2 = mysql_query ($query1);
     $row1 = mysql_fetch_array($result2);
     $refmail  = $row1[1];
@@ -137,11 +139,18 @@ $rmail->From = 'nav.ms.06@gmail.com';
 $rmail->FromName = 'User Name';
 $rmail->Subject = 'Subject';
 $rmail->AddAddress($refmail);
-echo $refmail;
-$rmail->Body = 'hi'.$fname.", http://localhost/Crystalx/1/activate.php?id=".$npass."&mode=referer&name=".$uname;;
+
+
+$host  = $_SERVER['HTTP_HOST'];
+$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+
+
+$rmail->Body = 'hi'.$fname.", http://$host$uri/activate.php?id=".$npass."&mode=referer&name=".$uname;;
 echo $rmail->Send();
 
-header("Location: http://localhost/Crystalx/1/");
+$host  = $_SERVER['HTTP_HOST'];
+$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 
+header("Location: http://$host$uri/");
  }
  ?>
